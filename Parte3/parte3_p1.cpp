@@ -1,15 +1,20 @@
 #include <iostream>
 #include <armadillo>
-
+#include "Pseudoinversa.h"
+ 
 using namespace std;
 using namespace arma;
 
-int main(int argc, char** argv)
-{
-	mat A(4, 5, fill::randu);
-	mat B(4, 5, fill::randu);
 
-	cout << A * B.t() << endl;
+int main()
+{
+	mat a = Pseudoinversa::CreateMatrix();
+
+	cout << "Matrix: "<< endl << a << endl;
+
+	a = Pseudoinversa::GetPseudoinversa(a);
+
+	cout << "Transpose: " << endl << a << endl;
 	
 	return 0;
 }
