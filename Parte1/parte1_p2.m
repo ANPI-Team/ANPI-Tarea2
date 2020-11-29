@@ -27,14 +27,15 @@ function xi = parte1_p2()
     
     for i = 1:m #for para ir calculando los Xi
       sumatoria = 0; #aquí se irá guardando el valor de la sumatoria de la ecuación (1)
-      bi = b(i); #dado que los valores brindados para b sin 1 siempre, este valor siempre será un 1, independientemente de la posición
+      #bi = b(i); #dado que los valores brindados para b sin 1 siempre, este valor siempre será un 1, independientemente de la posición
+      #ya que los tiempos aumentan si se calcula con bi, por lo que se deja como 1 en el cálculo del xi+1
       
       for j = 1:m
         if i != j #el cálculo de la sumatoria se hará siempre que j no sea igual a i
           sumatoria += A(i,j)*xi(j); #Se hace la suma de la multiplicación del A en la posición ij con el Xi
         endif
       endfor
-      xi_1(i) = (1/A(i,i))*(bi-sumatoria); #se sustituye el valor Xi+1 de los valores iniciales
+      xi_1(i) = (1/A(i,i))*(1-sumatoria); #se sustituye el valor Xi+1 de los valores iniciales
       
     endfor
     c_parada = norm(A*xi-b); #se calcula la condición de parada para verificar con la tolerancia, este sería el error

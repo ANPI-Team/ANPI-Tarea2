@@ -16,9 +16,9 @@ function xk = parte1_p3(n)
 
   while(error>tol)&& (k<1000)
     
-    fun_handler=@(i) jacobi_aux(A,b,tmpXk, m,i);
+    t_fun=@(i) jacobi_aux(A,b,tmpXk, m,i);
     #el resultado de pararrayfun es un vector fila, necesitamos que sea columna por lo que utilizamos el operador de transpuesta
-    tmpXk=pararrayfun(n,fun_handler,tmp).'; 
+    tmpXk=pararrayfun(n,t_fun,tmp).'; 
     k=k+1;
     error=norm(A*tmpXk-b);
   endwhile

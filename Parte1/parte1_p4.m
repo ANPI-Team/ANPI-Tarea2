@@ -1,3 +1,12 @@
+%% Funcion que mide las aceleraciones para n cantidad de procesadores 
+%% 
+%% parametros:
+%% No recibe ningún parámetro
+%% 
+%% Salidas:
+%% Ts; tiempo de ejecución para el Jacobi secuencial
+%% Sp(n); aceleración para n cantidad de procesadores
+%% 
 function Sp = parte1_p4()
   tpArray =zeros(nproc,1);
   spArray = zeros(nproc, 1);
