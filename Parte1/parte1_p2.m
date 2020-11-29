@@ -5,7 +5,6 @@
 %%
 %%    Llamado en consola:
 %%    parte1_p2()
-
 function xi = parte1_p2()
   #valores dados en el enunciado para calcular A
   p = [1:0.1:25];

@@ -1,11 +1,9 @@
-pkg load parallel;
 %% Funcion que realiza el metodo iterativo de Jacobi 
 %% del documento de forma paralela mediante el paquete parallel de octave
 %% tiene como parametro el valor de n que es la cantidad de procesadores
 %% disponibles en la pc a ejecutar
-
-function xk = p1_p3(n)
-
+function xk = parte1_p3(n)
+  pkg load parallel
   m=242;
   tmpXk=zeros(m,1);
   b=ones(m,1);
