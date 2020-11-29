@@ -1,7 +1,7 @@
 %% Funcion que realiza el metodo iterativo de Jacobi 
 %% del documento de forma paralela mediante el paquete parallel de octave
-%% tiene como parametro el valor de n que es la cantidad de procesadores
-%% disponibles en la pc a ejecutar
+%% n; Cantidad de procesadores que se usarán para ejecutar
+%% xk; Vector columna resultante
 function xk = parte1_p3(n)
   pkg load parallel
   m=242;
