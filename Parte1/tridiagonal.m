@@ -6,12 +6,11 @@
 %%    m: Valor para el tamaño de la matriz, debe ser mayor o igual a 3, la matriz será de mxm
 %%
 %%    tridiagonal([1:0.1:25],[1:0.1:25],242)
-
 function A = tridiagonal(p,q,m)
-  if (m < 3 || numel(q) != (m-1) || numel(p) != (m-1))#verificar condiciones: m debe ser >= 3, len de p y q deben cumplir m-1
+  if (numel(q) != (m-1) || numel(p) != (m-1) || m < 3 )#verificar condiciones: m debe ser >= 3, len de p y q deben cumplir m-1
     disp("Los valores ingresador no cumplen con las condiciones esperadas:\nm debe ser >= 3\nlen de p y q deben cumplir m-1\n"); #error a retornar si no se cumplen las condiciones
+  
   else
-    
     a = zeros(m,m); #se crea la matriz de tamaño mxm con valores 0
 
     for i = 1:(m) #entra en la fila

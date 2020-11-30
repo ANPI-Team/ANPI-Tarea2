@@ -28,7 +28,7 @@ function xi = parte1_p2()
     for i = 1:m #for para ir calculando los Xi
       sumatoria = 0; #aquí se irá guardando el valor de la sumatoria de la ecuación (1)
       #bi = b(i); #dado que los valores brindados para b sin 1 siempre, este valor siempre será un 1, independientemente de la posición
-      #ya que los tiempos aumentan si se calcula con bi, por lo que se deja como 1 en el cálculo del xi+1
+      #ya que los tiempos aumentan si se calcula con bi, por lo que se deja como 1 en el cálculo del xi+1, con bi = 10.832, con 1 = 10.550
       
       for j = 1:m
         if i != j #el cálculo de la sumatoria se hará siempre que j no sea igual a i
